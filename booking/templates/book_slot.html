@@ -1,0 +1,14 @@
+<!-- templates/book_slot.html -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1>Book Slot at {{ center.name }}</h1>
+    <p>Available slots: {{ center.slots }}</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-primary">Book Slot</button>
+    </form>
+</div>
+{% endblock %}
