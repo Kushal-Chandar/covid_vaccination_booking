@@ -18,3 +18,9 @@ A web application for covid vaccination booking written in Django.
 - Add Vaccination Centres
 - Get dosage details (group by centers)
 - Remove vaccination centers
+
+### Schema
+
+![dbschema](/dbschema.png)
+
+### Demo

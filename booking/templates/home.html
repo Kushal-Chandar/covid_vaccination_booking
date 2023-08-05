@@ -45,6 +45,7 @@
               <h3>{{ center.name }}</h3>
               <p><strong>Working Hours:</strong> {{ center.working_hours_start }} - {{ center.working_hours_end }}</p>
               <p><strong>Slots:</strong> {{ center.slots }}</p>
+              <p><strong>Slots:</strong> {{ center.dosage }}</p>
           </li>
             {% if user.is_authenticated %}
                 {% if center.slots > 0 %}

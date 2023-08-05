@@ -1,7 +1,11 @@
 from django.contrib import admin
-
-# Register your models here.
 from .models import VaccinationCenter, Slot
 
-admin.site.register(VaccinationCenter)
+# Register your models here.
+
+class VaccinationCenterAdmin(admin.ModelAdmin):
+    list_display = ('name', 'working_hours_start', 'working_hours_end', 'slots', 'dosage')
+    list_filter = ('dosage',)
+
+admin.site.register(VaccinationCenter, VaccinationCenterAdmin)
 admin.site.register(Slot)
