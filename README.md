@@ -18,5 +18,3 @@ A web application for covid vaccination booking.
 - Add Vaccination Centres
 - Get dosage details (group by centers)
 - Remove vaccination centers
-
-Add DB Schema

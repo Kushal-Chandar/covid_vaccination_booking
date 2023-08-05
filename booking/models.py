@@ -18,10 +18,3 @@ class Slot(models.Model):
 
     def __str__(self):
         return f"Slot for {self.user.username} at {self.center.name}"
-
-
-class UserProfile(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-
-    def __str__(self):
-        return self.user.username
