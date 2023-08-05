@@ -24,3 +24,5 @@ A web application for covid vaccination booking written in Django.
 ![dbschema](/dbschema.png)
 
 ### Demo
+
+https://github.com/Kushal-Chandar/covid_vaccination_booking/assets/83660514/8a0110a4-7801-4e03-9368-ce76e3eee219
