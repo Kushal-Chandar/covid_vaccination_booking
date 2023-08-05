@@ -1,6 +1,6 @@
 # Covid Vaccination Booking
 
-A web application for covid vaccination booking.
+A web application for covid vaccination booking written in Django.
 
 ## Type of Users
 
