@@ -1,0 +1,15 @@
+<!-- templates/book_slot.html -->
+
+{% extends 'base.html' %}
+
+{% block confirm_slot_booking %}
+<div class="container mt-5">
+    <h1>Confirm Slot Booking</h1>
+    <p>Are you sure you want to book a slot at {{ center.name }}?</p>
+    <form method="post" action="{% url 'book_slot' center.id %}">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-primary">Confirm Booking</button>
+        <a href="{% url 'home' %}" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>
+{% endblock %}

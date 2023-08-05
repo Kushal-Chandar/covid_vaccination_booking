@@ -46,15 +46,15 @@
               <p><strong>Working Hours:</strong> {{ center.working_hours_start }} - {{ center.working_hours_end }}</p>
               <p><strong>Slots:</strong> {{ center.slots }}</p>
           </li>
-          {% if user.is_authenticated %}
-              {% if center.slots > 0 %}
-                  <a href="{% url 'book_slot' center.id %}" class="btn btn-primary">Book Slot</a>
-              {% else %}
-                  <p>No available slots.</p>
-              {% endif %}
-          {% else %}
-              <a href="{% url 'user_login' %}?next={% url 'book_slot' center.id %}" class="btn btn-primary">Login to Book Slot</a>
-          {% endif %}
+            {% if user.is_authenticated %}
+                {% if center.slots > 0 %}
+                    <a href="{% url 'confirm_slot_booking' center.id %}" class="btn btn-primary">Book Slot</a>
+                {% else %}
+                    <p>No available slots.</p>
+                {% endif %}
+            {% else %}
+                <a href="{% url 'user_login' %}?next={% url 'confirm_slot_booking' center.id %}" class="btn btn-primary">Login to Book Slot</a>
+            {% endif %}
       {% empty %}
           <li class="list-group-item">No results found.</li>
       {% endfor %}

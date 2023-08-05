@@ -62,6 +62,11 @@ def home(request):
     return render(request, 'home.html', {'centers': centers})
 
 @login_required(login_url='user_login')
+def confirm_slot_booking(request, center_id):
+    center = get_object_or_404(VaccinationCenter, id=center_id)
+    return render(request, 'confirm_slot_booking.html', {'center': center})
+
+@login_required(login_url='user_login')
 def book_slot(request, center_id):
     center = get_object_or_404(VaccinationCenter, id=center_id)
     if center.slots > 0:
